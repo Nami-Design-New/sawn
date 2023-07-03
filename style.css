@@ -43,6 +43,10 @@ a {
   font-family: "Tajawal", serif;
 }
 
+body.noscroll {
+  overflow: hidden !important;
+}
+
 nav {
   padding: 20px 120px;
   display: flex;
@@ -689,10 +693,6 @@ footer .copy p {
     max-height: 45px;
   }
 }
-body.noscroll {
-  overflow: hidden !important;
-}
-
 @media (max-width: 768px) {
   nav {
     padding: 20px 40px;

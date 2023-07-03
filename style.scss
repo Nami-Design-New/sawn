@@ -3,6 +3,9 @@
   direction: rtl;
   font-family: "Tajawal", serif;
 }
+body.noscroll {
+  overflow: hidden !important;
+}
 nav {
   padding: 20px 120px;
   display: flex;
@@ -640,9 +643,6 @@ footer {
       max-height: 45px;
     }
   }
-}
-body.noscroll {
-  overflow: hidden !important;
 }
 @media (max-width: 768px) {
   nav {
