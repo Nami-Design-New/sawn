@@ -602,7 +602,7 @@ footer {
 }
 @media (max-width: 992px) {
   nav {
-    padding: 20px 60px 0 60px;
+    padding: 20px 60px;
     ul {
       gap: 44px;
     }
@@ -646,11 +646,10 @@ body.noscroll {
 }
 @media (max-width: 768px) {
   nav {
-    padding: 20px 40px 0 40px;
+    padding: 20px 40px;
     transition: all .5s ease-in-out;
     &.opened {
       height: 100vh;
-      position: relative;
       ul {
         display: flex;
         flex-direction: column;
@@ -665,7 +664,7 @@ body.noscroll {
       display: none;
     }
     .btns {
-      height: 80px;
+      height: 56px;
       button {
         display: block;
       }
