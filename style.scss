@@ -792,6 +792,9 @@ body.noscroll {
         }
       }
     }
+    .packages .package {
+      width: 280px;
+    }
     .contact form {
       margin: 0;
       padding: 2rem;
@@ -815,10 +818,10 @@ body.noscroll {
     .row {
       grid-template-columns: repeat(1, 1fr);
       .col:first-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        display: none;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
       }
       .col:last-child {
         padding-right: 0;

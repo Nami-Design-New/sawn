@@ -834,6 +834,9 @@ body.noscroll {
   .container .header .thumb-col .circle-back img {
     max-height: 380px;
   }
+  .container .packages .package {
+    width: 280px;
+  }
   .container .contact form {
     margin: 0;
     padding: 2rem;
@@ -858,10 +861,7 @@ body.noscroll {
     grid-template-columns: repeat(1, 1fr);
   }
   footer .row .col:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: none;
   }
   footer .row .col:last-child {
     padding-right: 0;
