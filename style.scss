@@ -811,6 +811,7 @@ body.noscroll {
     }
   }
   footer {
+    padding:  0 40px;
     .row {
       grid-template-columns: repeat(1, 1fr);
       .col:first-child{

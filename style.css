@@ -851,6 +851,9 @@ body.noscroll {
   .container .usage .cards .use-card {
     width: 90%;
   }
+  footer {
+    padding: 0 40px;
+  }
   footer .row {
     grid-template-columns: repeat(1, 1fr);
   }
