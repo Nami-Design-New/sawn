@@ -4,7 +4,7 @@
   font-family: "Tajawal", serif;
 }
 nav {
-  padding: 20px 120px 0 120px;
+  padding: 20px 120px;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -42,13 +42,10 @@ nav {
     }
   }
   .logo {
-    width: 160px;
-    height: 80px;
     a {
       display: block;
-      height: 100%;
       img {
-        max-width: 100%;
+        max-height: 56px;
       }
     }
   }
@@ -606,6 +603,9 @@ footer {
 @media (max-width: 992px) {
   nav {
     padding: 20px 60px 0 60px;
+    ul {
+      gap: 44px;
+    }
   }
   .container {
     padding: 0 60px;
@@ -641,15 +641,186 @@ footer {
     }
   }
 }
+body.noscroll {
+  overflow: hidden !important;
+}
 @media (max-width: 768px) {
   nav {
     padding: 20px 40px 0 40px;
+    transition: all .5s ease-in-out;
+    &.opened {
+      height: 100vh;
+      position: relative;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+      }
+    }
     ul {
       display: none;
     }
     .btns {
+      height: 80px;
       button {
         display: block;
+      }
+    }
+  }
+  .container {
+    padding: 0 40px;
+    .header {
+      .thumb-col {
+        padding-top: 140px;
+        .circle-back {
+          width: 340px;
+          height: 340px;
+          img {
+            max-height: 440px;
+          }
+        }
+      }
+      .decription-col {
+        .downoad-app .links img {
+          max-height: 40px;
+        }
+        h1 {
+          font-size: 26px;
+          line-height: 45px;
+        }
+        .clients .cc .client {
+          width: 45px;
+          height: 45px;
+        }
+        .clients .customers span {
+          line-height: 24px;
+        }
+      }
+    }
+    .about .row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      .static-box:nth-child(2) {
+        border: none;
+      }
+    }
+    .packages {
+      overflow-x: scroll;
+      padding-bottom: 32px;
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $white;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-image: $linear_blue;
+      }
+      .package {
+        width: 330px;
+      }
+    }
+    .appImgs .swiper .frame {
+      top: 30%;
+    }
+    .usage .cards {
+      @include centerFlex();
+      flex-direction: column;
+      .use-card {
+        width: 50%;
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+    }
+    .contact form {
+      gap: 3rem;
+      margin: 0 2rem;
+      .form-group {
+        flex-direction: column;
+        gap: 3rem;
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+  footer {
+    .row {
+      grid-template-columns: repeat(3, 1fr);
+      .col:last-child {
+        padding-right: 32px;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  nav {
+    .logo {
+      width: 140px;
+    }
+    .btns a {
+      display: none;
+    }
+  }
+  .container {
+    .header {
+      height: 100%;
+      flex-direction: column-reverse;
+      margin-top: 302px;
+      .decription-col {
+        width: 100%;
+        padding-top: 74px;
+      }
+      .thumb-col {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        .circle-back {
+          width: 300px;
+          height: 300px;
+          img {
+            max-height: 380px;
+          }
+        }
+      }
+    }
+    .contact form {
+      margin: 0;
+      padding: 2rem;
+      gap: 2rem;
+      .form-group {
+        gap: 2rem;
+      }
+    }
+    .appImgs {
+      padding: 3rem 0 0 0;
+      .swiper {
+        padding-bottom: 0;
+      }
+    }
+    .usage .cards .use-card {
+      width: 90%;
+    }
+  }
+  footer {
+    .row {
+      grid-template-columns: repeat(1, 1fr);
+      .col:first-child{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .col:last-child{
+        padding-right: 0;
       }
     }
   }

@@ -63,3 +63,25 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+//----------------------menue--------------------//
+let menu = document.querySelector(".menu");
+let links = document.querySelectorAll(".nav-link a");
+menu.addEventListener("click", () => {
+  if (menu.querySelector("i").classList.contains("fa-bars")) {
+    menu.querySelector("i").classList.remove("fa-bars");
+    menu.querySelector("i").classList.add("fa-times");
+  } else {
+    menu.querySelector("i").classList.remove("fa-times");
+    menu.querySelector("i").classList.add("fa-bars");
+  }
+  document.querySelector("body").classList.toggle("noscroll");
+  document.querySelector("nav").classList.toggle("opened");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      document.querySelector("nav").classList.remove("opened");
+      menu.querySelector("i").classList.remove("fa-times");
+      menu.querySelector("i").classList.add("fa-bars");
+      document.querySelector("body").classList.remove("noscroll");
+    });
+  });
+});

@@ -44,7 +44,7 @@ a {
 }
 
 nav {
-  padding: 20px 120px 0 120px;
+  padding: 20px 120px;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -84,16 +84,11 @@ nav ul li a {
   font-weight: 600;
   font-size: 15px;
 }
-nav .logo {
-  width: 160px;
-  height: 80px;
-}
 nav .logo a {
   display: block;
-  height: 100%;
 }
 nav .logo a img {
-  max-width: 100%;
+  max-height: 56px;
 }
 nav .btns {
   display: flex;
@@ -661,6 +656,9 @@ footer .copy p {
   nav {
     padding: 20px 60px 0 60px;
   }
+  nav ul {
+    gap: 44px;
+  }
   .container {
     padding: 0 60px;
   }
@@ -691,14 +689,178 @@ footer .copy p {
     max-height: 45px;
   }
 }
+body.noscroll {
+  overflow: hidden !important;
+}
+
 @media (max-width: 768px) {
   nav {
     padding: 20px 40px 0 40px;
+    transition: all 0.5s ease-in-out;
+  }
+  nav.opened {
+    height: 100vh;
+    position: relative;
+  }
+  nav.opened ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
   }
   nav ul {
     display: none;
   }
+  nav .btns {
+    height: 80px;
+  }
   nav .btns button {
     display: block;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .container .header .thumb-col {
+    padding-top: 140px;
+  }
+  .container .header .thumb-col .circle-back {
+    width: 340px;
+    height: 340px;
+  }
+  .container .header .thumb-col .circle-back img {
+    max-height: 440px;
+  }
+  .container .header .decription-col .downoad-app .links img {
+    max-height: 40px;
+  }
+  .container .header .decription-col h1 {
+    font-size: 26px;
+    line-height: 45px;
+  }
+  .container .header .decription-col .clients .cc .client {
+    width: 45px;
+    height: 45px;
+  }
+  .container .header .decription-col .clients .customers span {
+    line-height: 24px;
+  }
+  .container .about .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .container .about .row .static-box:nth-child(2) {
+    border: none;
+  }
+  .container .packages {
+    overflow-x: scroll;
+    padding-bottom: 32px;
+  }
+  .container .packages::-webkit-scrollbar {
+    height: 4px;
+  }
+  .container .packages::-webkit-scrollbar-track {
+    background-color: #fff;
+  }
+  .container .packages::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(97.65deg, #56e0e0 0.33%, #007299 93.35%);
+  }
+  .container .packages .package {
+    width: 330px;
+  }
+  .container .appImgs .swiper .frame {
+    top: 30%;
+  }
+  .container .usage .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container .usage .cards .use-card {
+    width: 50%;
+  }
+  .container .usage .cards .use-card:nth-child(1) {
+    margin-top: 0;
+  }
+  .container .usage .cards .use-card:nth-child(2) {
+    margin-top: 0;
+  }
+  .container .contact form {
+    gap: 3rem;
+    margin: 0 2rem;
+  }
+  .container .contact form .form-group {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .container .contact form .form-group input {
+    width: 100%;
+  }
+  footer .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer .row .col:last-child {
+    padding-right: 32px;
+  }
+}
+@media (max-width: 576px) {
+  nav .logo {
+    width: 140px;
+  }
+  nav .btns a {
+    display: none;
+  }
+  .container .header {
+    height: 100%;
+    flex-direction: column-reverse;
+    margin-top: 302px;
+  }
+  .container .header .decription-col {
+    width: 100%;
+    padding-top: 74px;
+  }
+  .container .header .thumb-col {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .header .thumb-col .circle-back {
+    width: 300px;
+    height: 300px;
+  }
+  .container .header .thumb-col .circle-back img {
+    max-height: 380px;
+  }
+  .container .contact form {
+    margin: 0;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .container .contact form .form-group {
+    gap: 2rem;
+  }
+  .container .appImgs {
+    padding: 3rem 0 0 0;
+  }
+  .container .appImgs .swiper {
+    padding-bottom: 0;
+  }
+  .container .usage .cards .use-card {
+    width: 90%;
+  }
+  footer .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer .row .col:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  footer .row .col:last-child {
+    padding-right: 0;
   }
 }/*# sourceMappingURL=style.css.map */
