@@ -116,7 +116,7 @@ nav {
         .links {
           display: flex;
           padding: 22px 0;
-          gap: 3rem;
+          gap: 1rem;
           img {
             max-height: 46px;
           }
@@ -191,9 +191,10 @@ nav {
     }
   }
   .packages {
-    @include space-between();
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
     .package {
-      width: 340px;
       padding: 15px;
       border-radius: 24px;
       background-color: $secondary;
@@ -286,10 +287,11 @@ nav {
     }
     .cards {
       display: flex;
-      gap: 100px;
+      gap: 80px;
       .use-card {
         width: calc(100% / 3.5);
-        padding: 15px 0;
+        gap: 1.25rem;
+        padding:0 2rem ;
         @include centerFlex();
         flex-direction: column;
         height: 320px;
@@ -301,6 +303,17 @@ nav {
         }
         &:nth-child(1) {
           margin-top: 100px;
+        }
+        h3{
+          text-align: center;
+          line-height: 30px;
+        }
+        p{
+          margin-bottom: 0;
+          line-height: 24px;
+          text-align: center;
+          color: $gray;
+          font-weight: 500;
         }
       }
     }
