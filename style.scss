@@ -145,7 +145,7 @@ nav {
     }
   }
   .about {
-    padding: 50px 0;
+    padding: 4rem 0;
     h2 {
       font-size: 24px;
       text-align: center;
@@ -187,6 +187,17 @@ nav {
           margin-top: 30px;
           font-size: 22px;
         }
+      }
+    }
+    .row2 {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      .service-card {
+        background-color: $white;
+        height: 240px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       }
     }
   }
@@ -284,6 +295,7 @@ nav {
     p {
       text-align: center;
       margin-bottom: 4rem;
+      color: $dark-green;
     }
     .cards {
       display: flex;
@@ -291,7 +303,7 @@ nav {
       .use-card {
         width: calc(100% / 3.5);
         gap: 1.25rem;
-        padding:0 2rem ;
+        padding: 0 2rem;
         @include centerFlex();
         flex-direction: column;
         height: 320px;
@@ -304,11 +316,11 @@ nav {
         &:nth-child(1) {
           margin-top: 100px;
         }
-        h3{
+        h3 {
           text-align: center;
           line-height: 30px;
         }
-        p{
+        p {
           margin-bottom: 0;
           line-height: 24px;
           text-align: center;
@@ -318,46 +330,128 @@ nav {
       }
     }
   }
-}
-footer {
-  padding: 50px 100px;
-  background-color: $secondary;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  .logo img {
-    max-width: 200px;
-  }
-  .col {
-    h4 {
-      color: $dark-green;
-      font-size: 22px;
+  .contact {
+    padding-top: 2rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
     }
     p {
+      text-align: center;
+      margin-bottom: 3rem;
       color: $dark-green;
-      line-height: 28px;
-      padding: 5px 0;
     }
-    .contact {
+    form {
+      background-color: #ededed;
       display: flex;
-      gap: 8px;
-      align-items: center;
-      i {
+      flex-direction: column;
+      gap: 4rem;
+      margin: 0 10rem;
+      padding: 4rem;
+      .form-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        input {
+          @include clearInput();
+          border-bottom: 1px solid $black;
+          &:focus {
+            border-color: $main;
+          }
+        }
+      }
+      .message-field {
+        width: 100%;
+        textarea {
+          width: 100%;
+          @include clearInput();
+          border-bottom: 1px solid $black;
+          &:focus {
+            border-color: $main;
+          }
+        }
+      }
+      button {
+        width: 160px;
+        height: 50px;
+        cursor: pointer;
+        @include clearInput();
+        background-color: $main;
+        color: $white;
         font-size: 18px;
-        color: $dark-green;
-      }
-      a {
-        color: $dark-green;
+        border-radius: 14px;
       }
     }
-    .social {
-      display: flex;
-      padding: 15px 0;
-      gap: 15px;
-      a i {
+  }
+}
+footer {
+  padding: 32px 100px;
+  display: flex;
+  flex-direction: column;
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    .logo img {
+      max-width: 200px;
+    }
+    .col {
+      h4 {
         color: $dark-green;
         font-size: 22px;
+        margin-bottom: 16px;
       }
+      p {
+        color: $dark-green;
+        line-height: 28px;
+        padding: 5px 0;
+      }
+      .contact {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        i {
+          font-size: 18px;
+          color: $dark-green;
+        }
+        a {
+          color: $dark-green;
+        }
+      }
+      .social {
+        display: flex;
+        padding: 15px 0;
+        gap: 15px;
+        a i {
+          color: $dark-green;
+          font-size: 22px;
+        }
+      }
+      .links {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        img {
+          max-height: 50px;
+        }
+      }
+      ul li a {
+        color: $dark-green;
+        font-weight: 500;
+      }
+    }
+  }
+  .copy {
+    width: 100%;
+    border-top: 1px solid #dbdad9;
+    margin-top: 2rem;
+    padding-top: 32px;
+    p {
+      text-align: center;
+      color: $dark-green;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 }

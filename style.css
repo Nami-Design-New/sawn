@@ -190,7 +190,7 @@ nav .btns a {
   max-height: 510px;
 }
 .container .about {
-  padding: 50px 0;
+  padding: 4rem 0;
 }
 .container .about h2 {
   font-size: 24px;
@@ -236,6 +236,17 @@ nav .btns a {
 .container .about .row .static-box h4 {
   margin-top: 30px;
   font-size: 22px;
+}
+.container .about .row2 {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.container .about .row2 .service-card {
+  background-color: #fff;
+  height: 240px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .container .packages {
   display: grid;
@@ -334,6 +345,7 @@ nav .btns a {
 .container .usage p {
   text-align: center;
   margin-bottom: 4rem;
+  color: #1c646b;
 }
 .container .usage .cards {
   display: flex;
@@ -369,44 +381,132 @@ nav .btns a {
   color: #777777;
   font-weight: 500;
 }
+.container .contact {
+  padding-top: 2rem;
+}
+.container .contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .contact p {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1c646b;
+}
+.container .contact form {
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 10rem;
+  padding: 4rem;
+}
+.container .contact form .form-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .contact form .form-group input {
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #161616;
+}
+.container .contact form .form-group input:focus {
+  border-color: #0f70e5;
+}
+.container .contact form .message-field {
+  width: 100%;
+}
+.container .contact form .message-field textarea {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #161616;
+}
+.container .contact form .message-field textarea:focus {
+  border-color: #0f70e5;
+}
+.container .contact form button {
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  background-color: #0f70e5;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 14px;
+}
 
 footer {
-  padding: 50px 100px;
-  background-color: #eaf8f9;
+  padding: 32px 100px;
+  display: flex;
+  flex-direction: column;
+}
+footer .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
-footer .logo img {
+footer .row .logo img {
   max-width: 200px;
 }
-footer .col h4 {
+footer .row .col h4 {
   color: #1c646b;
   font-size: 22px;
+  margin-bottom: 16px;
 }
-footer .col p {
+footer .row .col p {
   color: #1c646b;
   line-height: 28px;
   padding: 5px 0;
 }
-footer .col .contact {
+footer .row .col .contact {
   display: flex;
   gap: 8px;
   align-items: center;
 }
-footer .col .contact i {
+footer .row .col .contact i {
   font-size: 18px;
   color: #1c646b;
 }
-footer .col .contact a {
+footer .row .col .contact a {
   color: #1c646b;
 }
-footer .col .social {
+footer .row .col .social {
   display: flex;
   padding: 15px 0;
   gap: 15px;
 }
-footer .col .social a i {
+footer .row .col .social a i {
   color: #1c646b;
   font-size: 22px;
+}
+footer .row .col .links {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .row .col .links img {
+  max-height: 50px;
+}
+footer .row .col ul li a {
+  color: #1c646b;
+  font-weight: 500;
+}
+footer .copy {
+  width: 100%;
+  border-top: 1px solid #dbdad9;
+  margin-top: 2rem;
+  padding-top: 32px;
+}
+footer .copy p {
+  text-align: center;
+  color: #1c646b;
+  font-size: 16px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
