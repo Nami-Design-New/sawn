@@ -807,22 +807,31 @@ body.noscroll {
       }
     }
     .usage .cards .use-card {
-      width: 90%;
+      width: 100%;
     }
   }
   footer {
-    padding:  0 40px;
+    padding: 32px 40px;
     .row {
       grid-template-columns: repeat(1, 1fr);
-      .col:first-child{
+      .col:first-child {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
       }
-      .col:last-child{
+      .col:last-child {
         padding-right: 0;
       }
+      .col .links {
+        flex-direction: row;
+        img {
+          max-height: 34px;
+        }
+      }
+    }
+    .copy p {
+      line-height: 24px;
     }
   }
 }
