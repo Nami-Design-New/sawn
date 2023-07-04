@@ -844,9 +844,8 @@ footer {
   }
   .container {
     .header {
-      height: 100%;
+      height: auto;
       flex-direction: column-reverse;
-      margin-top: 302px;
       .decription-col {
         width: 100%;
         padding-top: 74px;

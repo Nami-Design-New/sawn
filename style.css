@@ -900,9 +900,8 @@ footer .copy p {
     font-size: 12px;
   }
   .container .header {
-    height: 100%;
+    height: auto;
     flex-direction: column-reverse;
-    margin-top: 302px;
   }
   .container .header .decription-col {
     width: 100%;
