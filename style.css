@@ -857,6 +857,10 @@ footer .copy p {
   .container .usage .cards .use-card {
     width: 100%;
   }
+  .container .contact .circl1 {
+    top: initial;
+    bottom: -80px;
+  }
   footer {
     padding: 32px 40px;
   }

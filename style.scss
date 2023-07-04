@@ -820,6 +820,10 @@ footer {
     .usage .cards .use-card {
       width: 100%;
     }
+    .contact .circl1 {
+      top: initial;
+      bottom: -80px;
+    }
   }
   footer {
     padding: 32px 40px;
@@ -831,10 +835,10 @@ footer {
       .col:last-child {
         padding-right: 0;
       }
-      .phones{
+      .phones {
         display: flex;
         justify-content: space-between;
-        
+
         margin-bottom: 1rem;
       }
       .col .links {
