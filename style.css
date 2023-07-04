@@ -806,6 +806,9 @@ footer .copy p {
   }
 }
 @media (max-width: 576px) {
+  nav {
+    padding: 20px 32px;
+  }
   nav .logo a img {
     max-height: 42px;
   }
