@@ -48,7 +48,7 @@ body.noscroll {
       gap: 2.5rem;
       justify-content: center;
       flex-direction: column;
-      .btn{
+      .btn {
         cursor: pointer;
         @include clearInput();
         width: 60%;
@@ -58,10 +58,10 @@ body.noscroll {
         height: 42px;
         border-radius: 8px;
       }
-      input{
+      input {
         @include clearInput();
         border-bottom: 1px solid #dbdad9;
-        &:focus{
+        &:focus {
           border-color: $main;
         }
       }
@@ -827,7 +827,7 @@ footer {
   }
 }
 @media (max-width: 576px) {
-  .model-view .form{
+  .model-view .form {
     width: 300px;
   }
   nav {
@@ -904,9 +904,8 @@ footer {
       }
       .phones {
         display: flex;
-        justify-content: space-between;
         margin-bottom: 1rem;
-        padding-left: 1rem ;
+        gap: 1.5rem;
       }
       .col .links {
         flex-direction: row;

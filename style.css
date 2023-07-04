@@ -961,9 +961,8 @@ footer .copy p {
   }
   footer .row .phones {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 1rem;
-    padding-left: 1rem;
+    gap: 1.5rem;
   }
   footer .row .col .links {
     flex-direction: row;
