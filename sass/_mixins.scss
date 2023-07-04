@@ -14,13 +14,15 @@ ul {
 a {
   text-decoration: none;
 }
+:target {
+  scroll-margin-top: 100px;
+}
 $black: #161616;
 $main: #0f70e5;
 $white: #fff;
 $secondary: #eaf8f9;
 $dark-green: #1c646b;
-$gray:#777777;
-
+$gray: #777777;
 $dark_blue: #172048;
 $hover_blue: #05789d;
 $linear_blue: linear-gradient(97.65deg, #56e0e0 0.33%, #007299 93.35%);

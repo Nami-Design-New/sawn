@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+:target {
+  scroll-margin-top: 100px;
+}
+
 .span {
   background: linear-gradient(97.65deg, #56e0e0 0.33%, #007299 93.35%);
   background-clip: text;
