@@ -85,3 +85,15 @@ menu.addEventListener("click", () => {
     });
   });
 });
+//-----------------popup-model--------------------//
+let subscribe_btns = document.querySelectorAll(".sub");
+subscribe_btns.forEach(sub => {
+  sub.addEventListener("click", () => {
+    document.querySelector("body").classList.toggle("noscroll");
+    document.querySelector(".model-view").classList.toggle("opened");
+  });
+});
+document.querySelector(".close").addEventListener("click", () => {
+  document.querySelector("body").classList.remove("noscroll");
+  document.querySelector(".model-view").classList.remove("opened");
+});

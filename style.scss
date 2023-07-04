@@ -6,6 +6,68 @@
 body.noscroll {
   overflow: hidden !important;
 }
+.model-view {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: 99999999999999999;
+  display: none;
+  &.opened {
+    @include centerFlex();
+  }
+  .form {
+    background-color: $white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 340px;
+    height: 340px;
+    border-radius: 22px;
+    position: relative;
+    padding: 3rem;
+    .close {
+      cursor: pointer;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      @include clearInput();
+      width: 24px;
+      height: 24px;
+      @include centerFlex();
+      i {
+        color: $dark-green;
+        font-size: 20px;
+      }
+    }
+    form {
+      width: 100%;
+      height: 100%;
+      margin-top: 1rem;
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      flex-direction: column;
+      .btn{
+        cursor: pointer;
+        @include clearInput();
+        width: 60%;
+        background-color: $main;
+        color: $white;
+        align-self: center;
+        height: 42px;
+        border-radius: 8px;
+      }
+      input{
+        @include clearInput();
+        border-bottom: 1px solid #dbdad9;
+        &:focus{
+          border-color: $main;
+        }
+      }
+    }
+  }
+}
 nav {
   padding: 20px 120px;
   display: flex;
@@ -56,6 +118,7 @@ nav {
     @include centerFlex();
     gap: 16px;
     a {
+      @include centerFlex();
       padding: 5px 17px;
       background: $main;
       color: $white;
@@ -447,7 +510,7 @@ nav {
         width: 100%;
         input {
           @include clearInput();
-          border-bottom: 1px solid $black;
+          border-bottom: 1px solid #dbdad9;
           &:focus {
             border-color: $main;
           }
@@ -458,7 +521,7 @@ nav {
         textarea {
           width: 100%;
           @include clearInput();
-          border-bottom: 1px solid $black;
+          border-bottom: 1px solid #dbdad9;
           &:focus {
             border-color: $main;
           }
@@ -764,6 +827,9 @@ footer {
   }
 }
 @media (max-width: 576px) {
+  .model-view .form{
+    width: 300px;
+  }
   nav {
     padding: 20px 32px;
     .logo {
@@ -839,7 +905,6 @@ footer {
       .phones {
         display: flex;
         justify-content: space-between;
-
         margin-bottom: 1rem;
       }
       .col .links {
