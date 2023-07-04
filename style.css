@@ -51,6 +51,76 @@ body.noscroll {
   overflow: hidden !important;
 }
 
+.sign-in {
+  padding: 48px 120px 120px 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sign-in h1 {
+  color: #1c646b;
+  font-size: 28px;
+  margin-bottom: 3rem;
+}
+.sign-in form {
+  width: min(100%, 600px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.sign-in form .input-field {
+  background: linear-gradient(0deg, #fafafa, #fafafa), linear-gradient(0deg, #f4f4f4, #f4f4f4);
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  gap: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-in form .input-field i {
+  color: #0f70e5;
+  font-size: 18px;
+}
+.sign-in form .input-field input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 85%;
+}
+.sign-in form .input-field input::-moz-placeholder {
+  color: #161616;
+  font-weight: 500;
+}
+.sign-in form .input-field input::placeholder {
+  color: #161616;
+  font-weight: 500;
+}
+.sign-in form p {
+  align-self: flex-start;
+  color: #161616;
+  font-weight: 500;
+}
+.sign-in form p a {
+  padding-right: 4px;
+  color: #0f70e5;
+}
+.sign-in form button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  background: none;
+  outline: none;
+  background-color: #0f70e5;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .model-view {
   width: 100vw;
   height: 100vh;
@@ -122,6 +192,10 @@ body.noscroll {
 }
 .model-view .form form input:focus {
   border-color: #0f70e5;
+}
+
+.footer_login {
+  border-top: 1px solid #f4f4f4;
 }
 
 nav {
@@ -197,6 +271,19 @@ nav .btns button {
   background: none;
   outline: none;
   background-color: #0f70e5;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+nav .log-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  cursor: pointer;
+  height: 40px;
+  background: #0f70e5;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -886,6 +973,9 @@ footer .copy p {
   }
 }
 @media (max-width: 576px) {
+  .sign-in {
+    padding: 80px 40px;
+  }
   nav {
     padding: 20px 32px;
   }
@@ -921,6 +1011,22 @@ footer .copy p {
   }
   .container .packages .package {
     width: 280px;
+  }
+  .container .packages .package .package-head {
+    height: 160px;
+  }
+  .container .packages .package .package-head h3 {
+    margin-top: 48px;
+  }
+  .container .packages .package .price {
+    padding: 12px 0;
+    font-size: 22px;
+  }
+  .container .packages .package .features {
+    padding: 16px;
+  }
+  .container .packages .package .features ul {
+    gap: 4px;
   }
   .container .usage .cards {
     gap: 32px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sawn-login</title>
+    <title>sawn-signup</title>
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -16,11 +16,15 @@
                 <img src="images/logo.png" alt="logo">
             </a>
         </div>
-        <a href="index.html" class="log-btn">الرئيسيه</a>
+        <a href="login.html" class="log-btn">الدخول</a>
     </nav>
     <main class="sign-in">
-        <h1>تسجيل الدخول...</h1>
+        <h1>تسجيل حساب جديد...</h1>
         <form action="">
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" required placeholder="اسم المستخدم">
+            </div>
             <div class="input-field">
                 <i class="fas fa-envelope"></i>
                 <input type="email" id="email" name="email" required placeholder="البريد الالكتروني">
@@ -29,7 +33,13 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" id="password" name="password" required placeholder="كلمه المرور">
             </div>
-            <button type=" submit">دخول</button>
+            <div class="input-field">
+                <i class="fas fa-check-square"></i>
+                <input type="password" id="confirm-password" name="confirm-password" required
+                    placeholder="تاكيد كلمه المرور">
+            </div>
+            <p>هل لديك حساب؟<a href="login.html">تسجيل الدخول</a></p>
+            <button type=" submit">انشاء حساب</button>
         </form>
     </main>
     <footer class="footer_login">

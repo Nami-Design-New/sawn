@@ -6,6 +6,64 @@
 body.noscroll {
   overflow: hidden !important;
 }
+.sign-in {
+  padding: 48px 120px 120px 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    color: $dark-green;
+    font-size: 28px;
+    margin-bottom: 3rem;
+  }
+  form {
+    width: min(100%, 600px);
+    @include centerFlex();
+    flex-direction: column;
+    gap: 2rem;
+    .input-field {
+      background: linear-gradient(0deg, #fafafa, #fafafa),
+        linear-gradient(0deg, #f4f4f4, #f4f4f4);
+      width: 100%;
+      height: 60px;
+      border-radius: 12px;
+      gap: 4%;
+      i {
+        color: $main;
+        font-size: 18px;
+      }
+      @include centerFlex();
+      input {
+        @include clearInput();
+        width: 85%;
+        &::placeholder {
+          color: $black;
+          font-weight: 500;
+        }
+      }
+    }
+    p{
+      align-self: flex-start;
+      color: $black;
+      font-weight: 500;
+      a{
+        padding-right: 4px;
+        color: $main;
+      }
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      @include clearInput();
+      background-color: $main;
+      color: $white;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
 .model-view {
   width: 100vw;
   height: 100vh;
@@ -67,6 +125,9 @@ body.noscroll {
       }
     }
   }
+}
+.footer_login {
+  border-top: 1px solid #f4f4f4;
 }
 nav {
   padding: 20px 120px;
@@ -138,6 +199,17 @@ nav {
       font-weight: 500;
       border-radius: 10px;
     }
+  }
+  .log-btn {
+    @include centerFlex();
+    width: 120px;
+    cursor: pointer;
+    height: 40px;
+    background: $main;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
   }
 }
 .container {
@@ -827,6 +899,9 @@ footer {
   }
 }
 @media (max-width: 576px) {
+  .sign-in {
+    padding: 80px 40px;
+  }
   nav {
     padding: 20px 32px;
     .logo {
@@ -865,6 +940,22 @@ footer {
     }
     .packages .package {
       width: 280px;
+      .package-head {
+        height: 160px;
+        h3 {
+          margin-top: 48px;
+        }
+      }
+      .price {
+        padding: 12px 0;
+        font-size: 22px;
+      }
+      .features {
+        padding: 16px;
+        ul {
+          gap: 4px;
+        }
+      }
     }
     .usage .cards {
       gap: 32px;
