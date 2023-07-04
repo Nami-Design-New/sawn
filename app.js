@@ -97,3 +97,7 @@ document.querySelector(".close").addEventListener("click", () => {
   document.querySelector("body").classList.remove("noscroll");
   document.querySelector(".model-view").classList.remove("opened");
 });
+document.querySelector(".model-view").addEventListener("click", () => {
+  document.querySelector("body").classList.remove("noscroll");
+  document.querySelector(".model-view").classList.remove("opened");
+});

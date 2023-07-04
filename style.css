@@ -69,7 +69,7 @@ body.noscroll {
 .model-view .form {
   background-color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 340px;
+  width: min(100% - 48px, 340px);
   height: 340px;
   border-radius: 22px;
   position: relative;
@@ -886,9 +886,6 @@ footer .copy p {
   }
 }
 @media (max-width: 576px) {
-  .model-view .form {
-    width: 300px;
-  }
   nav {
     padding: 20px 32px;
   }
@@ -925,6 +922,12 @@ footer .copy p {
   }
   .container .packages .package {
     width: 280px;
+  }
+  .container .usage .cards {
+    gap: 32px;
+  }
+  .container .usage .cards .use-card {
+    height: 280px;
   }
   .container .contact form {
     margin: 0;
