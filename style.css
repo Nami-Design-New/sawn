@@ -53,6 +53,7 @@ body.noscroll {
 
 .sign-in {
   padding: 48px 120px 120px 120px;
+  min-height: calc(100vh - 488px);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -291,12 +292,12 @@ nav .log-btn {
 }
 
 .container {
-  padding: 0 120px;
-  margin-bottom: 100px;
+  width: min(100% - 240px, 1320px);
+  margin: 0 auto 100px;
 }
 .container .header {
-  height: calc(100vh - 100px);
   display: flex;
+  margin-bottom: 4rem;
 }
 .container .header .decription-col {
   width: 50%;
@@ -663,13 +664,17 @@ nav .log-btn {
   justify-content: space-between;
   width: 100%;
 }
-.container .contact form .form-group input {
+.container .contact form .form-group .input-field {
+  width: 30.7692307692%;
+}
+.container .contact form .form-group .input-field input {
   border: none;
   background: none;
   outline: none;
+  width: 100%;
   border-bottom: 1px solid #dbdad9;
 }
-.container .contact form .form-group input:focus {
+.container .contact form .form-group .input-field input:focus {
   border-color: #0f70e5;
 }
 .container .contact form .message-field {
@@ -834,7 +839,7 @@ footer .copy p {
     gap: 44px;
   }
   .container {
-    padding: 0 60px;
+    width: min(100% - 120px, 1320px);
   }
   .container .header .thumb-col .circle-back {
     width: 420px;
@@ -890,7 +895,7 @@ footer .copy p {
     display: block;
   }
   .container {
-    padding: 0 40px;
+    width: min(100% - 80px, 1320px);
   }
   .container .header .thumb-col {
     padding-top: 140px;
@@ -962,7 +967,7 @@ footer .copy p {
     flex-direction: column;
     gap: 3rem;
   }
-  .container .contact form .form-group input {
+  .container .contact form .form-group .input-field {
     width: 100%;
   }
   footer .row {
