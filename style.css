@@ -869,6 +869,11 @@ footer .copy p {
   footer .row .col:last-child {
     padding-right: 0;
   }
+  footer .row .phones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
   footer .row .col .links {
     flex-direction: row;
   }

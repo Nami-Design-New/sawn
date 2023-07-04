@@ -831,6 +831,12 @@ footer {
       .col:last-child {
         padding-right: 0;
       }
+      .phones{
+        display: flex;
+        justify-content: space-between;
+        
+        margin-bottom: 1rem;
+      }
       .col .links {
         flex-direction: row;
         img {
