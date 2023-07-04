@@ -7,6 +7,7 @@ body.noscroll {
   overflow: hidden !important;
 }
 .sign-in {
+  position: relative;
   padding: 48px 120px 120px 120px;
   min-height: calc(100vh - 488px);
   display: flex;
@@ -19,6 +20,10 @@ body.noscroll {
   }
   form {
     width: min(100%, 600px);
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: $btn_shadow;
     @include centerFlex();
     flex-direction: column;
     gap: 2rem;
@@ -55,6 +60,7 @@ body.noscroll {
     button {
       width: 200px;
       height: 50px;
+      align-self: flex-start;
       @include clearInput();
       background-color: $main;
       color: $white;
@@ -63,6 +69,18 @@ body.noscroll {
       font-size: 16px;
       font-weight: 500;
     }
+  }
+  #svg2{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
+  }
+  #svg1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 }
 .model-view {
