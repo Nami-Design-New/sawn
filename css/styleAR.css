@@ -44,6 +44,7 @@ a {
 
 * {
   font-family: "Tajawal", serif;
+  direction: rtl;
 }
 
 body.noscroll {
@@ -1157,4 +1158,18 @@ footer .copy p {
 
 .cc-picker-code-filter {
   width: 256px;
+}
+
+.cc-picker-code-list > li {
+  display: flex;
+  align-items: baseline;
+  padding: 4px 8px;
+  gap: 4px;
+}
+.cc-picker-code-list > li .cc-picker-flag {
+  min-width: 16px;
+  margin: unset;
+}
+.cc-picker-code-list > li .cc-picker-code {
+  line-height: unset;
 }/*# sourceMappingURL=styleAR.css.map */

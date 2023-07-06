@@ -1097,3 +1097,18 @@ footer {
 .cc-picker-code-filter {
   width: 256px;
 }
+
+
+.cc-picker-code-list > li {
+  display: flex;
+  align-items: baseline;
+  padding: 4px 8px ;
+  gap: 4px;
+  .cc-picker-flag{
+    min-width: 16px;
+    margin: unset;
+  }
+   .cc-picker-code{
+    line-height: unset;
+   }
+}
