@@ -21,27 +21,36 @@ body.noscroll {
   form {
     width: min(100%, 600px);
     background-color: $white;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem;
     border-radius: 20px;
     box-shadow: $btn_shadow;
     @include centerFlex();
     flex-direction: column;
-    gap: 2rem;
+    gap: 16px;
     .input-field {
       background: linear-gradient(0deg, #fafafa, #fafafa),
         linear-gradient(0deg, #f4f4f4, #f4f4f4);
-      width: 100%;
-      height: 60px;
+      min-height: 60px;
       border-radius: 12px;
-      gap: 4%;
+      gap: 12px;
+      flex: 1 ;
+      width: 100%;
+      min-width: 220px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
       i {
         color: $main;
+        min-width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 18px;
       }
-      @include centerFlex();
       input {
         @include clearInput();
-        width: 85%;
+        flex: 1;
         &::placeholder {
           color: $black;
           font-weight: 500;
@@ -53,8 +62,9 @@ body.noscroll {
       color: $black;
       font-weight: 500;
       margin: auto;
+
       a {
-        padding-left: 4px;
+        padding-right: 8px;
         color: $main;
       }
     }
@@ -69,12 +79,12 @@ body.noscroll {
       cursor: pointer;
       font-size: 16px;
       font-weight: 500;
-      margin: auto;
+      margin: 24px auto 12px;
     }
   }
   #svg2 {
     position: absolute;
-    bottom: 0px;
+    bottom: -80px;
     right : 0;
     z-index: -1;
   }
@@ -198,7 +208,7 @@ nav {
   }
   .btns {
     @include centerFlex();
-    gap: 16px;
+    gap: 8px;
     a {
       @include centerFlex();
       padding: 5px 17px;
@@ -653,6 +663,7 @@ footer {
   padding: 32px 100px;
   display: flex;
   flex-direction: column;
+  background-color: white;
   .row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1053,4 +1064,36 @@ footer {
   flex-direction: column;
   gap: 4px;
   margin-bottom: 48px;
+}
+
+
+.rowField{
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cc-picker-code-select-enabled{
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: unset;
+  .cc-picker-code{
+    width: auto;
+    font-size: 16px;
+  }
+  .cc-picker-flag{
+    margin: unset;
+    margin-right: 4px;
+    min-width: 16px;
+  }
+  &::after{
+    display: none;
+  
+  }
+}
+
+.cc-picker-code-filter {
+  width: 256px;
 }

@@ -1,6 +1,5 @@
 @import "./sass/mixins";
 * {
-  direction: rtl;
   font-family: "Tajawal", serif;
 }
 body.noscroll {
@@ -22,27 +21,36 @@ body.noscroll {
   form {
     width: min(100%, 600px);
     background-color: $white;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem;
     border-radius: 20px;
     box-shadow: $btn_shadow;
     @include centerFlex();
     flex-direction: column;
-    gap: 2rem;
+    gap: 16px;
     .input-field {
       background: linear-gradient(0deg, #fafafa, #fafafa),
         linear-gradient(0deg, #f4f4f4, #f4f4f4);
-      width: 100%;
-      height: 60px;
+      min-height: 60px;
       border-radius: 12px;
-      gap: 4%;
+      gap: 12px;
+      flex: 1 ;
+      width: 100%;
+      min-width: 220px;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
       i {
         color: $main;
+        min-width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 18px;
       }
-      @include centerFlex();
       input {
         @include clearInput();
-        width: 85%;
+        flex: 1;
         &::placeholder {
           color: $black;
           font-weight: 500;
@@ -54,8 +62,9 @@ body.noscroll {
       color: $black;
       font-weight: 500;
       margin: auto;
+
       a {
-        padding-right: 4px;
+        padding-left: 8px;
         color: $main;
       }
     }
@@ -70,19 +79,19 @@ body.noscroll {
       cursor: pointer;
       font-size: 16px;
       font-weight: 500;
-      margin: auto;
+      margin: 24px auto 12px;
     }
   }
   #svg2 {
     position: absolute;
-    bottom: 0px;
-    left: 0;
+    bottom: -80px;
+    left : 0;
     z-index: -1;
   }
   #svg1 {
     position: absolute;
     top: 0;
-    left: 0;
+    left : 0;
     z-index: -1;
   }
 }
@@ -91,7 +100,7 @@ body.noscroll {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left : 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   z-index: 99999999999999999;
   display: none;
@@ -110,7 +119,7 @@ body.noscroll {
       cursor: pointer;
       position: absolute;
       top: 24px;
-      left: 24px;
+      left : 24px;
       @include clearInput();
       width: 24px;
       height: 24px;
@@ -168,7 +177,7 @@ nav {
       &::after {
         position: absolute;
         content: " ";
-        left: 50%;
+        left : 50%;
         width: 0;
         height: 2px;
         bottom: 2px;
@@ -199,7 +208,7 @@ nav {
   }
   .btns {
     @include centerFlex();
-    gap: 16px;
+    gap: 8px;
     a {
       @include centerFlex();
       padding: 5px 17px;
@@ -258,7 +267,7 @@ nav {
             height: 60px;
             border-radius: 50%;
             overflow: hidden;
-            margin-left: -10px;
+            margin-left : -10px;
             img {
               object-fit: cover;
               width: 100%;
@@ -277,7 +286,7 @@ nav {
             line-height: 28px;
             i {
               color: #fbb326;
-              margin-left: 4px;
+              margin-left : 4px;
               font-size: 14px;
             }
           }
@@ -310,7 +319,7 @@ nav {
         position: relative;
         img {
           position: absolute;
-          left: 50%;
+          left : 50%;
           transform: translateX(-50%);
           top: -50px;
           max-height: 510px;
@@ -333,11 +342,11 @@ nav {
       grid-template-columns: repeat(4, 1fr);
       padding: 80px 0 80px 0;
       .static-box {
-        border-left: 1px solid #dbdad9;
+        border-left : 1px solid #dbdad9;
         @include centerFlex();
         flex-direction: column;
         &:last-child {
-          border-left: none;
+          border-left : none;
         }
         .circle {
           width: 70px;
@@ -391,7 +400,7 @@ nav {
             font-size: 32px;
             font-weight: 700;
             line-height: 48px;
-            margin-left: 4px;
+            margin-left : 4px;
           }
         }
         &.head1 {
@@ -433,7 +442,7 @@ nav {
             display: flex;
             align-items: center;
             img {
-              margin-left: 5px;
+              margin-left : 5px;
             }
           }
         }
@@ -484,7 +493,7 @@ nav {
         }
         position: absolute;
         top: 50%;
-        left: 50%;
+        left : 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
       }
@@ -504,7 +513,7 @@ nav {
     }
     .swiper-3d .swiper-slide-shadow-left {
       background: linear-gradient(
-        to left,
+        to left ,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0)
       );
@@ -542,7 +551,7 @@ nav {
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        left: 0;
+        left : 0;
         top: 0;
         width: 100%;
         height: 100%;
@@ -584,7 +593,7 @@ nav {
     .circl1 {
       position: absolute;
       top: 40px;
-      left: 40px;
+      left : 40px;
       width: 300px;
       height: 300px;
       z-index: -1;
@@ -654,6 +663,7 @@ footer {
   padding: 32px 100px;
   display: flex;
   flex-direction: column;
+  background-color: white;
   .row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -732,7 +742,7 @@ footer {
     top: unset;
     bottom: unset;
     right: unset;
-    left: unset;
+    left : unset;
     color: $main;
     .swiper-pagination-current {
       font-size: 30px;
@@ -750,7 +760,7 @@ footer {
     position: relative;
     right: unset;
     top: unset;
-    left: unset;
+    left : unset;
     bottom: unset;
     margin: 0 10px;
     cursor: pointer;
@@ -806,7 +816,7 @@ footer {
     .contact {
       .circl1 {
         top: 40px;
-        left: -40px;
+        left : -40px;
       }
       form {
         margin: 0 5rem;
@@ -831,7 +841,7 @@ footer {
         flex-direction: column;
         gap: 32px;
         position: absolute;
-        left: 50%;
+        left : 50%;
         top: 55%;
         transform: translate(-50%, -50%);
       }
@@ -1054,4 +1064,36 @@ footer {
   flex-direction: column;
   gap: 4px;
   margin-bottom: 48px;
+}
+
+
+.rowField{
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cc-picker-code-select-enabled{
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: unset;
+  .cc-picker-code{
+    width: auto;
+    font-size: 16px;
+  }
+  .cc-picker-flag{
+    margin: unset;
+    margin-left: 4px;
+    min-width: 16px;
+  }
+  &::after{
+    display: none;
+  
+  }
+}
+
+.cc-picker-code-filter {
+  width: 256px;
 }

@@ -8,6 +8,7 @@
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/jquery.ccpicker.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -34,6 +35,7 @@
             </li>
         </ul>
         <div class="btns">
+            <a href="#!" class="btn"> EN </a>
             <a href="login.html" class="btn">تسجيل الدخول</a>
             <button class="menu"><i class="fas fa-bars"></i></button>
         </div>
@@ -42,38 +44,46 @@
     <main class="sign-in">
         <h1>تسجيل حساب جديد...</h1>
         <form action="">
+            <!-- input -->
             <div class="input-field">
                 <i class="fas fa-user"></i>
                 <input type="text" id="name" name="name" required placeholder="اسم المستخدم">
             </div>
-            <div class="input-field">
-                <i class="fas fa-envelope"></i>
-                <input type="email" id="email" name="email" required placeholder="البريد الالكتروني">
+            <div class="rowField">
+                <!-- input -->
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" required placeholder="البريد الالكتروني">
+                </div>
+                <!-- input -->
+                <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="phoneField1" placeholder=" رقم الجوال " />
+
+                </div>
             </div>
-            <div class="input-field">
-                <i class="fas fa-lock"></i>
-                <input type="password" id="password" name="password" required placeholder="كلمه المرور">
-            </div>
-            <div class="input-field">
-                <i class="fas fa-check-square"></i>
-                <input type="password" id="confirm-password" name="confirm-password" required
-                    placeholder="تاكيد كلمه المرور">
+            <div class="rowField">
+                <!-- input -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" required placeholder="كلمه المرور">
+                </div>
+                <!-- input -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm-password" name="confirm-password" required
+                        placeholder="تاكيد كلمه المرور">
+                </div>
             </div>
             <button type=" submit">انشاء حساب</button>
             <p>هل لديك حساب؟<a href="login.html">تسجيل الدخول</a></p>
         </form>
-        <!-- <svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#eaf8f9" fill-opacity="1"
-                d="M0,64L48,85.3C96,107,192,149,288,181.3C384,213,480,235,576,240C672,245,768,235,864,213.3C960,192,1056,160,1152,170.7C1248,181,1344,235,1392,261.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-            </path>
-        </svg> -->
         <svg id="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#eaf8f9" fill-opacity="1"
                 d="M0,64L48,85.3C96,107,192,149,288,181.3C384,213,480,235,576,240C672,245,768,235,864,213.3C960,192,1056,160,1152,170.7C1248,181,1344,235,1392,261.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
             </path>
         </svg>
     </main>
-
     <!-- footer -->
     <footer>
         <div class="row">
@@ -126,6 +136,14 @@
     <!-- js -->
     <script src="js/swiper.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.ccpicker.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#phoneField1").CcPicker();
+            $("#phoneField1").CcPicker("setCountryByCode", "eg");
+        });
+    </script>
 </body>
 
 </html>
