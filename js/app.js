@@ -10,10 +10,10 @@ function startCount(element) {
     }
   }, 2500 / goal);
 }
-window.onscroll = function() {
+window.onscroll = function () {
   if (this.scrollY >= document.querySelector(".about").offsetTop) {
     if (!started) {
-      numbers.forEach(num => startCount(num));
+      numbers.forEach((num) => startCount(num));
     }
     started = true;
   }
@@ -29,7 +29,7 @@ var phoneImgs = new Swiper(".phoneImgs", {
   speed: 1000,
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
   loop: true,
   slidesPerView: "auto",
@@ -38,25 +38,25 @@ var phoneImgs = new Swiper(".phoneImgs", {
     stretch: 10,
     depth: 200,
     modifier: 1.2,
-    slideShadows: true
+    slideShadows: true,
   },
   navigation: {
     nextEl: ".appSliderNext",
-    prevEl: ".appSliderPrev"
-  }
+    prevEl: ".appSliderPrev",
+  },
 });
 //---------------nav-links-highlight---------------------//
 let navLinks = document.querySelectorAll(".nav-link");
 let sections = document.querySelectorAll(".sec");
 let current;
 window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
+  sections.forEach((sec) => {
     let secTop = sec.offsetTop;
     if (pageYOffset >= secTop - 110) {
       current = sec.getAttribute("id");
     }
   });
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.classList.remove("active");
     if (link.classList.contains(current)) {
       link.classList.add("active");
@@ -76,7 +76,7 @@ menu.addEventListener("click", () => {
   }
   document.querySelector("body").classList.toggle("noscroll");
   document.querySelector("nav").classList.toggle("opened");
-  links.forEach(link => {
+  links.forEach((link) => {
     link.addEventListener("click", () => {
       document.querySelector("nav").classList.remove("opened");
       menu.querySelector("i").classList.remove("fa-times");
@@ -87,17 +87,24 @@ menu.addEventListener("click", () => {
 });
 //-----------------popup-model--------------------//
 let subscribe_btns = document.querySelectorAll(".sub");
-subscribe_btns.forEach(sub => {
+let modelView = document.querySelector(".model-view");
+let closeBtn = document.querySelector(".close");
+
+subscribe_btns.forEach((sub) => {
   sub.addEventListener("click", () => {
     document.querySelector("body").classList.toggle("noscroll");
-    document.querySelector(".model-view").classList.toggle("opened");
+    modelView.classList.add("opened");
   });
 });
-document.querySelector(".close").addEventListener("click", () => {
+
+closeBtn.addEventListener("click", () => {
   document.querySelector("body").classList.remove("noscroll");
-  document.querySelector(".model-view").classList.remove("opened");
+  modelView.classList.remove("opened");
 });
-document.querySelector(".model-view").addEventListener("click", () => {
-  document.querySelector("body").classList.remove("noscroll");
-  document.querySelector(".model-view").classList.remove("opened");
+
+modelView.addEventListener("click", (e) => {
+  if (e.target === modelView) {
+    document.querySelector("body").classList.remove("noscroll");
+    modelView.classList.remove("opened");
+  }
 });
