@@ -6,22 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sawn</title>
     <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="swiper/swiper.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="model-view">
-        <div class="form">
-            <button class="close"><i class="fas fa-times-circle"></i></button>
-            <form action="">
-                <input type="email" id="email" name="email" required placeholder="البريد الالكتروني...">
-                <input type="tel" id="phone" name="phone" required placeholder="الجوال...">
-                <button class="btn" type="submit">ارسال</button>
-            </form>
-        </div>
-    </div>
+    <!-- nav -->
     <nav>
         <div class="logo">
             <a href="index.html">
@@ -30,24 +21,26 @@
         </div>
         <ul class="nav-links">
             <li class="nav-link home active">
-                <a href="#home">الرئيسيه</a>
+                <a href="index.html#">الرئيسيه</a>
             </li>
             <li class="nav-link about">
-                <a href="#about">من نحن</a>
+                <a href="index.html#about">من نحن</a>
             </li>
             <li class="nav-link packages">
-                <a href="#packages">الباقات</a>
+                <a href="index.html#packages">الباقات</a>
             </li>
             <li class="nav-link contact">
-                <a href="#contact">تواصل معنا</a>
+                <a href="index.html#contact">تواصل معنا</a>
             </li>
         </ul>
         <div class="btns">
-            <a href="signup.html" class="btn">تسجيل الدخول</a>
+            <a href="login.html" class="btn">تسجيل الدخول</a>
             <button class="menu"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
+    <!-- content -->
     <main class="container">
+        <!--  hero section -->
         <section class="sec header" id="home">
             <div class="decription-col">
                 <h1>مرحبا بك فى صون التطبيق الامثل لمعرفة ميعاد انتهاء صلاحيه المنتجات وامدادك بتنبيهات دوريه.</h1>
@@ -85,6 +78,7 @@
                 </div>
             </div>
         </section>
+        <!--  about -->
         <section class="sec about" id="about">
             <h2>لماذا تختارنا ...</h2>
             <p>نعرض لك بعض احصائيات التطبيق</p>
@@ -119,69 +113,84 @@
                 </div>
             </div>
         </section>
-        <section class="sec packages" id="packages">
-            <div class="package">
-                <div class="package-head head1">
-                    <h3>الباقة المجانية</h3>
-                    <p><b>7</b>أيام</p>
-                </div>
-                <h4 class="price">مجاناً</h4>
-                <div class="features">
-                    <ul>
-                        <li><img src="images/verify.png" alt="verify">التنبيهات</li>
-                        <li><img src="images/verify.png" alt="verify">التقويم</li>
-                        <li><img src="images/verify.png" alt="verify">إضافة منتجات</li>
-                        <li><img src="images/verify.png" alt="verify">مشاركة مع الاخرين</li>
-                        <li><img src="images/verify.png" alt="verify">مسح QR code</li>
-                        <li><img src="images/verify.png" alt="verify">تحكم في موعد التنبيهات</li>
-                    </ul>
-                </div>
-                <button class="sub">اشتراك</button>
+        <!--  packages -->
+        <section class="sec " id="packages">
+            <div class="sectionTitle">
+                <h2> الباقات والاشتراكات </h2>
+                <p> اختر الان الباقة المناسبة لك وابدأ استخدام التطبيق </p>
             </div>
-            <div class="package">
-                <div class="package-head head2">
-                    <h3>الباقة الفضية</h3>
-                    <p><b>6</b>شهور</p>
+            <div class="packages">
+                <div class="package">
+                    <div class="package-head head1">
+                        <h3>الباقة المجانية</h3>
+                        <p><b>7</b>أيام</p>
+                    </div>
+                    <h4 class="price">مجاناً</h4>
+                    <div class="features">
+                        <ul>
+                            <li><img src="images/verify.png" alt="verify">التنبيهات</li>
+                            <li><img src="images/verify.png" alt="verify">التقويم</li>
+                            <li><img src="images/verify.png" alt="verify">إضافة منتجات</li>
+                            <li><img src="images/verify.png" alt="verify">مشاركة مع الاخرين</li>
+                            <li><img src="images/verify.png" alt="verify">مسح QR code</li>
+                            <li><img src="images/verify.png" alt="verify">تحكم في موعد التنبيهات</li>
+                        </ul>
+                    </div>
+                    <button class="sub">اشتراك</button>
                 </div>
-                <h4 class="price">99,00 <small>ر.س</small></h4>
-                <div class="features">
-                    <ul>
-                        <li><img src="images/verify.png" alt="verify">التنبيهات</li>
-                        <li><img src="images/verify.png" alt="verify">التقويم</li>
-                        <li><img src="images/verify.png" alt="verify">إضافة منتجات</li>
-                        <li><img src="images/verify.png" alt="verify">مشاركة مع الاخرين</li>
-                        <li><img src="images/verify.png" alt="verify">مسح QR code</li>
-                        <li><img src="images/verify.png" alt="verify">تحكم في موعد التنبيهات</li>
-                    </ul>
+                <div class="package">
+                    <div class="package-head head2">
+                        <h3>الباقة الفضية</h3>
+                        <p><b>6</b>شهور</p>
+                    </div>
+                    <h4 class="price">99,00 <small>ر.س</small></h4>
+                    <div class="features">
+                        <ul>
+                            <li><img src="images/verify.png" alt="verify">التنبيهات</li>
+                            <li><img src="images/verify.png" alt="verify">التقويم</li>
+                            <li><img src="images/verify.png" alt="verify">إضافة منتجات</li>
+                            <li><img src="images/verify.png" alt="verify">مشاركة مع الاخرين</li>
+                            <li><img src="images/verify.png" alt="verify">مسح QR code</li>
+                            <li><img src="images/verify.png" alt="verify">تحكم في موعد التنبيهات</li>
+                        </ul>
+                    </div>
+                    <button class="sub">اشتراك</button>
                 </div>
-                <button class="sub">اشتراك</button>
-            </div>
-            <div class="package">
-                <div class="package-head head3">
-                    <h3>الباقة الذهبية</h3>
-                    <p><b>12</b>شهر</p>
+                <div class="package">
+                    <div class="package-head head3">
+                        <h3>الباقة الذهبية</h3>
+                        <p><b>12</b>شهر</p>
+                    </div>
+                    <h4 class="price">169,00 <small>ر.س</small></h4>
+                    <div class="features">
+                        <ul>
+                            <li><img src="images/verify.png" alt="verify">التنبيهات</li>
+                            <li><img src="images/verify.png" alt="verify">التقويم</li>
+                            <li><img src="images/verify.png" alt="verify">إضافة منتجات</li>
+                            <li><img src="images/verify.png" alt="verify">مشاركة مع الاخرين</li>
+                            <li><img src="images/verify.png" alt="verify">مسح QR code</li>
+                            <li><img src="images/verify.png" alt="verify">تحكم في موعد التنبيهات</li>
+                        </ul>
+                    </div>
+                    <button class="sub">اشتراك</button>
                 </div>
-                <h4 class="price">169,00 <small>ر.س</small></h4>
-                <div class="features">
-                    <ul>
-                        <li><img src="images/verify.png" alt="verify">التنبيهات</li>
-                        <li><img src="images/verify.png" alt="verify">التقويم</li>
-                        <li><img src="images/verify.png" alt="verify">إضافة منتجات</li>
-                        <li><img src="images/verify.png" alt="verify">مشاركة مع الاخرين</li>
-                        <li><img src="images/verify.png" alt="verify">مسح QR code</li>
-                        <li><img src="images/verify.png" alt="verify">تحكم في موعد التنبيهات</li>
-                    </ul>
+                <div class="model-view">
+                    <div class="form">
+                        <button class="close"><i class="fas fa-times-circle"></i></button>
+                        <form action="">
+                            <input type="email" id="email" name="email" required placeholder="البريد الالكتروني...">
+                            <input type="tel" id="phone" name="phone" required placeholder="الجوال...">
+                            <button class="btn" type="submit">ارسال</button>
+                        </form>
+                    </div>
                 </div>
-                <button class="sub">اشتراك</button>
             </div>
         </section>
+        <!--  appImgs -->
         <section class="appImgs">
             <div class="sectionTitle">
                 <h2> صور التطبيق </h2>
-                <div class="swiperBtns">
-                    <div class="appSliderPrev swiper-button-prev"></div>
-                    <div class="appSliderNext swiper-button-next"></div>
-                </div>
+                <p> صور واقعية من داخل التطبيق ... </p>
             </div>
             <div class="swiper phoneImgs">
                 <div class="swiper-wrapper">
@@ -216,6 +225,7 @@
                 <img src="images/2.png" class="frame" alt="">
             </div>
         </section>
+        <!--  usage -->
         <section class="usage">
             <h2>كيفيةاستخدام التطبيق</h2>
             <p>بضع خطوات بسيطة لتسهل عليك استخدام التطبيق وبدء التعامل معه .</p>
@@ -242,8 +252,8 @@
                     <p>حدد الباقه المناسبه لك داخل الخدمات</p>
                 </div>
             </div>
-
         </section>
+        <!--  contact -->
         <section class="sec contact" id="contact">
             <div class="circl1"></div>
             <h2>ابقى على تواصل معنا...</h2>
@@ -267,6 +277,7 @@
             </form>
         </section>
     </main>
+    <!-- footer -->
     <footer>
         <div class="row">
             <div class="col">
@@ -315,8 +326,9 @@
             <p>.Copyright © 2023 Sawn. All rights reserved</p>
         </div>
     </footer>
-    <script src="swiper/swiper.js"></script>
-    <script src="app.js"></script>
+    <!-- js -->
+    <script src="js/swiper.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

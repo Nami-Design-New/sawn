@@ -53,16 +53,17 @@ body.noscroll {
 
 .sign-in {
   position: relative;
-  padding: 48px 120px 120px 120px;
+  padding: 120px;
   min-height: calc(100vh - 488px);
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .sign-in h1 {
   color: #1c646b;
   font-size: 28px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .sign-in form {
   width: min(100%, 600px);
@@ -108,6 +109,7 @@ body.noscroll {
   align-self: flex-start;
   color: #161616;
   font-weight: 500;
+  margin: auto;
 }
 .sign-in form p a {
   padding-right: 4px;
@@ -126,6 +128,7 @@ body.noscroll {
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
+  margin: auto;
 }
 .sign-in #svg2 {
   position: absolute;
@@ -394,7 +397,7 @@ nav .log-btn {
   max-height: 510px;
 }
 .container .about {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 .container .about h2 {
   font-size: 24px;
@@ -474,13 +477,13 @@ nav .log-btn {
   margin-left: 4px;
 }
 .container .packages .package .package-head.head1 {
-  background-image: url("images/IMG_2994.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../images/IMG_2994.JPG");
 }
 .container .packages .package .package-head.head2 {
-  background-image: url("images/IMG_2998.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../images/IMG_2998.JPG");
 }
 .container .packages .package .package-head.head3 {
-  background-image: url("images/IMG_2996.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../images/IMG_2996.JPG");
 }
 .container .packages .package .price {
   color: #1c646b;
@@ -528,7 +531,7 @@ nav .log-btn {
   cursor: pointer;
 }
 .container .appImgs {
-  padding-top: 10rem;
+  padding-top: 8rem;
   position: relative;
 }
 .container .appImgs .swiper {
@@ -569,16 +572,6 @@ nav .log-btn {
     height: 401px;
   }
 }
-.container .appImgs .sectionTitle {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.container .appImgs .sectionTitle h2 {
-  width: 100%;
-  font-size: 24px;
-}
 .container .appImgs .swiper-wrapper {
   height: auto;
 }
@@ -612,12 +605,28 @@ nav .log-btn {
 }
 .container .usage .cards {
   display: flex;
-  gap: 80px;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  padding: 0 40px;
+}
+.container .usage .cards::before {
+  content: "";
+  background: url(../images/arrow.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .container .usage .cards .use-card {
   width: 28.5714285714%;
   gap: 1.25rem;
-  padding: 0 2rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -870,7 +879,7 @@ footer .copy p {
     gap: 1.5rem;
   }
   .container .usage .cards {
-    gap: 60px;
+    gap: 20px;
   }
   .container .contact .circl1 {
     top: 40px;
@@ -1104,4 +1113,11 @@ footer .copy p {
   footer .copy p {
     line-height: 24px;
   }
+}
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 48px;
 }/*# sourceMappingURL=style.css.map */
