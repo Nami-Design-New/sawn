@@ -477,13 +477,13 @@ nav .log-btn {
   margin-left: 4px;
 }
 .container .packages .package .package-head.head1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../images/IMG_2994.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../img/IMG_2994.JPG");
 }
 .container .packages .package .package-head.head2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../images/IMG_2998.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../img/IMG_2998.JPG");
 }
 .container .packages .package .package-head.head3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../images/IMG_2996.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5019607843)), url("../img/IMG_2996.JPG");
 }
 .container .packages .package .price {
   color: #1c646b;
@@ -612,7 +612,7 @@ nav .log-btn {
 }
 .container .usage .cards::before {
   content: "";
-  background: url(../images/arrow.svg);
+  background: url(../img/arrow.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;

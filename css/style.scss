@@ -396,15 +396,15 @@ nav {
         }
         &.head1 {
           background-image: linear-gradient(#00000080, #00000080),
-            url("../images/IMG_2994.JPG");
+            url("../img/IMG_2994.JPG");
         }
         &.head2 {
           background-image: linear-gradient(#00000080, #00000080),
-            url("../images/IMG_2998.JPG");
+            url("../img/IMG_2998.JPG");
         }
         &.head3 {
           background-image: linear-gradient(#00000080, #00000080),
-            url("../images/IMG_2996.JPG");
+            url("../img/IMG_2996.JPG");
         }
       }
       .price {
@@ -537,7 +537,7 @@ nav {
       padding: 0 40px;
       &::before {
         content: "";
-        background: url(../images/arrow.svg);
+        background: url(../img/arrow.svg);
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
