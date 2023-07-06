@@ -1,5 +1,6 @@
 @import "./sass/mixins";
 * {
+  direction: rtl;
   font-family: "Tajawal", serif;
 }
 body.noscroll {
@@ -54,7 +55,7 @@ body.noscroll {
       font-weight: 500;
       margin: auto;
       a {
-        padding-left: 4px;
+        padding-right: 4px;
         color: $main;
       }
     }
@@ -75,13 +76,13 @@ body.noscroll {
   #svg2 {
     position: absolute;
     bottom: 0px;
-    right : 0;
+    left: 0;
     z-index: -1;
   }
   #svg1 {
     position: absolute;
     top: 0;
-    right : 0;
+    left: 0;
     z-index: -1;
   }
 }
@@ -90,7 +91,7 @@ body.noscroll {
   height: 100vh;
   position: fixed;
   top: 0;
-  right : 0;
+  left: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   z-index: 99999999999999999;
   display: none;
@@ -109,7 +110,7 @@ body.noscroll {
       cursor: pointer;
       position: absolute;
       top: 24px;
-      right : 24px;
+      left: 24px;
       @include clearInput();
       width: 24px;
       height: 24px;
@@ -167,11 +168,11 @@ nav {
       &::after {
         position: absolute;
         content: " ";
-        right : 50%;
+        left: 50%;
         width: 0;
         height: 2px;
         bottom: 2px;
-        transform: translateX(50%);
+        transform: translateX(-50%);
         background-color: $main;
         transition: 0.3s ease-in-out;
       }
@@ -257,7 +258,7 @@ nav {
             height: 60px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right : -10px;
+            margin-left: -10px;
             img {
               object-fit: cover;
               width: 100%;
@@ -276,7 +277,7 @@ nav {
             line-height: 28px;
             i {
               color: #fbb326;
-              margin-right : 4px;
+              margin-left: 4px;
               font-size: 14px;
             }
           }
@@ -309,8 +310,8 @@ nav {
         position: relative;
         img {
           position: absolute;
-          right : 50%;
-          transform: translateX(50%);
+          left: 50%;
+          transform: translateX(-50%);
           top: -50px;
           max-height: 510px;
         }
@@ -332,11 +333,11 @@ nav {
       grid-template-columns: repeat(4, 1fr);
       padding: 80px 0 80px 0;
       .static-box {
-        border-right : 1px solid #dbdad9;
+        border-left: 1px solid #dbdad9;
         @include centerFlex();
         flex-direction: column;
         &:last-child {
-          border-right : none;
+          border-left: none;
         }
         .circle {
           width: 70px;
@@ -390,7 +391,7 @@ nav {
             font-size: 32px;
             font-weight: 700;
             line-height: 48px;
-            margin-right : 4px;
+            margin-left: 4px;
           }
         }
         &.head1 {
@@ -432,7 +433,7 @@ nav {
             display: flex;
             align-items: center;
             img {
-              margin-right : 5px;
+              margin-left: 5px;
             }
           }
         }
@@ -483,8 +484,8 @@ nav {
         }
         position: absolute;
         top: 50%;
-        right : 50%;
-        transform: translate(50%, -50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 2;
       }
     }
@@ -503,14 +504,14 @@ nav {
     }
     .swiper-3d .swiper-slide-shadow-left {
       background: linear-gradient(
-        to right ,
+        to left,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0)
       );
     }
     .swiper-3d .swiper-slide-shadow-right {
       background: linear-gradient(
-        to left,
+        to right,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0)
       );
@@ -541,7 +542,7 @@ nav {
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        right : 0;
+        left: 0;
         top: 0;
         width: 100%;
         height: 100%;
@@ -583,7 +584,7 @@ nav {
     .circl1 {
       position: absolute;
       top: 40px;
-      right : 40px;
+      left: 40px;
       width: 300px;
       height: 300px;
       z-index: -1;
@@ -730,8 +731,8 @@ footer {
     position: relative;
     top: unset;
     bottom: unset;
+    right: unset;
     left: unset;
-    right : unset;
     color: $main;
     .swiper-pagination-current {
       font-size: 30px;
@@ -747,9 +748,9 @@ footer {
   .swiper-button-next,
   .swiper-button-prev {
     position: relative;
-    left: unset;
+    right: unset;
     top: unset;
-    right : unset;
+    left: unset;
     bottom: unset;
     margin: 0 10px;
     cursor: pointer;
@@ -770,7 +771,7 @@ footer {
     }
   }
   .swiper-button-next {
-    left: unset;
+    right: unset;
   }
   .swiper-button-prev {
     &::after {
@@ -805,7 +806,7 @@ footer {
     .contact {
       .circl1 {
         top: 40px;
-        right : -40px;
+        left: -40px;
       }
       form {
         margin: 0 5rem;
@@ -830,9 +831,9 @@ footer {
         flex-direction: column;
         gap: 32px;
         position: absolute;
-        right : 50%;
+        left: 50%;
         top: 55%;
-        transform: translate(50%, -50%);
+        transform: translate(-50%, -50%);
       }
     }
     ul {
@@ -927,7 +928,7 @@ footer {
     .row {
       grid-template-columns: repeat(3, 1fr);
       .col:last-child {
-        padding-left: 32px;
+        padding-right: 32px;
       }
     }
   }
@@ -1027,7 +1028,7 @@ footer {
         display: none;
       }
       .col:last-child {
-        padding-left: 0;
+        padding-right: 0;
       }
       .phones {
         display: flex;
