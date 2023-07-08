@@ -92,7 +92,7 @@ let closeBtn = document.querySelector(".close");
 
 subscribe_btns.forEach((sub) => {
   sub.addEventListener("click", () => {
-    document.querySelector("body").classList.toggle("noscroll");
+    document.querySelector("body").classList.add("noscroll");
     modelView.classList.add("opened");
   });
 });
