@@ -137,15 +137,9 @@ body.noscroll {
   font-weight: 500;
   margin: 24px auto 12px;
 }
-.sign-in #svg2 {
+.sign-in #svg {
   position: absolute;
-  bottom: -80px;
-  left: 0;
-  z-index: -1;
-}
-.sign-in #svg1 {
-  position: absolute;
-  top: 0;
+  bottom: 0px;
   left: 0;
   z-index: -1;
 }
